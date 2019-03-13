@@ -41,9 +41,6 @@ function followTrace(traces, element) {
       y: (traces.y - (h/2)) + "px"
     };
 
-    // get width and height
-    console.log(pos.y + " = " + traces.y + " - " + h);
-
     // place
     element.style.top = pos.y;
     element.style.left = pos.x;
