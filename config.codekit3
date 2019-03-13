@@ -45,13 +45,13 @@
 		},
 	"/src/js/app.js": {
 		"ft": 64,
-		"ma": 0,
+		"ma": 1,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/src/js/app.min.js",
 		"oF": 2,
-		"sC": 2,
-		"tS": 0
+		"sC": 0,
+		"tS": 1
 		},
 	"/src/js/app.min.js": {
 		"ft": 64,
@@ -62,6 +62,13 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/src/js/app.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/src/js/app.min.js.map",
+		"oF": 0
 		},
 	"/src/scss/app.scss": {
 		"aP": 1,
