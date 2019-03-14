@@ -38,6 +38,7 @@ html, body {
   // hover
   &:hover {
     color: darken($color, 95%);
+    cursor: none;
 
     // circle
     + .follow {
