@@ -8,6 +8,8 @@
 
 // declare follower
 var follow = document.querySelector(".js-circle");
+var canvas = document.querySelector(".js-canvas");
+var heading = document.querySelector(".js-heading");
 
 // trace mouse
 function traceUser(event) {
@@ -55,4 +57,20 @@ window.addEventListener("mousemove", function(event) {
 
   // move the follower
   followTrace(traces, follow);
+});
+
+// on mouseover
+heading.addEventListener("mouseover", function() {
+
+  // add class
+  canvas.classList.add("canvas--animated");
+
+});
+
+// on mouseout
+heading.addEventListener("mouseout", function() {
+
+  // remove class
+  canvas.classList.remove("canvas--animated");
+
 });
