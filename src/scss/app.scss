@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 
 $color: #fff;
+$timing: 100ms;
 
 html, body {
   width: 100vw;
@@ -12,11 +13,20 @@ html, body {
   overflow: hidden;
 }
 
+::selection {
+  background: transparent;
+}
+
+::-moz-selection {
+  background: transparent;
+}
+
 .canvas {
   width: 100vw;
   height: 100vh;
   display: table;
   overflow: hidden;
+  position: relative;
 }
 
 .canvas__heading {
@@ -33,7 +43,7 @@ html, body {
   padding: 5%;
 
   // transition
-  transition: color 250ms ease;
+  transition: color $timing * 2.5 ease;
 
   // hover
   &:hover {
@@ -54,7 +64,7 @@ html, body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: darken($color, 95%);
+  background-color: darken($color, 80%);
 
   // transition
   transition: all .5s ease;
@@ -62,6 +72,93 @@ html, body {
   // on fire
   .canvas--animated & {
     opacity: 1;
+  }
+}
+
+// buttons
+.canvas__button {
+  position: absolute;
+  z-index: 4;
+  font-weight: 400;
+  color: darken($color, 2.5%);
+  text-decoration: none;
+  padding: 30px;
+  font-size: 1.5vw;
+  letter-spacing: 1.5px;
+  display: block;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  // transition
+  transition: top $timing * 5 ease, left $timing * 5 ease, right $timing * 5 ease;
+
+  // after first init
+  &.button--hidden {
+  }
+
+  &.button--top-left.button--hidden {
+    left: -15%;
+  }
+
+  &.button--bottom-left.button--hidden {
+    left: -15%;
+  }
+
+  &.button--top-right.button--hidden {
+    right: -15%;
+  }
+
+  &.button--bottom-right.button--hidden {
+    right: -15%;
+  }
+
+  // buttons
+  &.button--top-left {
+    left: 0;
+    top: 0;
+  }
+
+  &.button--bottom-left {
+    left: 0;
+    bottom: 0;
+  }
+
+  &.button--top-right {
+    right: 0;
+    top: 0;
+  }
+
+  &.button--bottom-right {
+    right: 0;
+    bottom: 0;
+  }
+
+  // after
+  &:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: darken($color, 2.5%);
+    margin-top: 5px;
+    transition: width $timing * 5 ease;
+  }
+
+  // hover
+  &:hover {
+
+    // after
+    &:after {
+      width: 100%;
+    }
+
+    // circle
+    ~ .follow {
+      transform: scale(1.25);
+    }
   }
 }
 
@@ -76,7 +173,7 @@ html, body {
   position: absolute;
 
   // transition
-  transition: all 100ms ease, transform .5s ease;
+  transition: transform $timing * 5 ease, transform $timing * 5 ease;
   left: 0;
   top: 0;
   transform: scale(1);
@@ -88,6 +185,6 @@ html, body {
 
   // when fired
   .canvas--animated & {
-    transform: scale(1.5);
+    transform: scale(2);
   }
 }
