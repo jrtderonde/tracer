@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var follow = document.querySelector(".js-circle");
   var canvas = document.querySelector(".js-canvas");
   var heading = document.querySelector(".js-heading");
+  var buttons = document.querySelectorAll(".js-button");
 
   // trace mouse
   function traceUser(event) {
@@ -61,10 +62,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
       // set left
       r = Math.floor(Math.random() * Math.floor(w));
       element.style.left = r + "px";
+      console.log("left: " + r);
 
       // set top
       r = Math.floor(Math.random() * Math.floor(h));
       element.style.top = r + "px";
+      console.log("top: " + r);
     }
   }
 
@@ -89,6 +92,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // add class
     canvas.classList.add("canvas--animated");
+
+    // check if available
+    if (canvas.classList.contains("canvas--hidden-buttons")) {
+      // remove to start animation
+      canvas.classList.remove("canvas--hidden-buttons");
+
+      // loop and show
+      for (var i = 0; buttons.length > i; i++) {
+        // show buttons
+        console.log(buttons[i].classList);
+        buttons[i].classList.remove("button--hidden");
+      }
+    }
 
   });
 
