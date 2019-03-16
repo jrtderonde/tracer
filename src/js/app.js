@@ -1,76 +1,102 @@
- /*jslint devel: true */
-/*global alert, confirm, console, prompt */
-
 // tracer.io
 // by j1md3rond3
-// ---
-// ---
 
-// declare follower
-var follow = document.querySelector(".js-circle");
-var canvas = document.querySelector(".js-canvas");
-var heading = document.querySelector(".js-heading");
+document.addEventListener("DOMContentLoaded", function(event) {
 
-// trace mouse
-function traceUser(event) {
-  if (event !== null || traces !== underfined) {
-    "use strict";
-    // get mouse position
-    var p = {x: event.clientX, y: event.clientY}
-    // return values
-    return p;
-  } else {
-    console.log("event returned null...");
-  }
-}
+  // ===
+  // functions
+  // ===
 
-// follow trace
-function followTrace(traces, element) {
-  if (traces !== undefined && element != undefined) {
+  // declare follower
+  var follow = document.querySelector(".js-circle");
+  var canvas = document.querySelector(".js-canvas");
+  var heading = document.querySelector(".js-heading");
 
-    if (element.style.opacity !== 1) {
-      // set opacity to 1
-      element.style.opacity = 1;
+  // trace mouse
+  function traceUser(event) {
+    if (event !== null || traces !== underfined) {
+      "use strict";
+      // get mouse position
+      var p = {x: event.clientX, y: event.clientY}
+      // return values
+      return p;
     }
-
-    // set width and height
-    var w = element.offsetWidth;
-    var h = element.offsetHeight;
-
-    // calculate position
-    var pos = {
-      x: (traces.x - (w/2)) + "px",
-      y: (traces.y - (h/2)) + "px"
-    };
-
-    // place
-    element.style.top = pos.y;
-    element.style.left = pos.x;
   }
-}
 
-// on mouse move
-window.addEventListener("mousemove", function(event) {
+  // follow trace
+  function followTrace(traces, element) {
+    if (traces !== undefined && element != undefined) {
 
-  // set object
-  var traces = traceUser(event);
+      if (element.style.opacity !== 1) {
+        // set opacity to 1
+        element.style.opacity = 1;
+      }
 
-  // move the follower
-  followTrace(traces, follow);
-});
+      // set width and height
+      var w = element.offsetWidth;
+      var h = element.offsetHeight;
 
-// on mouseover
-heading.addEventListener("mouseover", function() {
+      // calculate position
+      var pos = {
+        x: (traces.x - (w/2)) + "px",
+        y: (traces.y - (h/2)) + "px"
+      };
 
-  // add class
-  canvas.classList.add("canvas--animated");
+      // place
+      element.style.top = pos.y;
+      element.style.left = pos.x;
+    }
+  }
 
-});
+  function randomSpawn (element) {
+    var w;
+    var h;
+    var r;
 
-// on mouseout
-heading.addEventListener("mouseout", function() {
+    // check if given
+    if (element !== undefined) {
+      w = window.innerWidth;
+      h = window.innerHeight;
 
-  // remove class
-  canvas.classList.remove("canvas--animated");
+      // set left
+      r = Math.floor(Math.random() * Math.floor(w));
+      element.style.left = r + "px";
 
+      // set top
+      r = Math.floor(Math.random() * Math.floor(h));
+      element.style.top = r + "px";
+    }
+  }
+
+  // ===
+  // init
+  // ===
+
+  randomSpawn(follow);
+
+  // on mouse move
+  window.addEventListener("mousemove", function(event) {
+
+    // set object
+    var traces = traceUser(event);
+
+    // move the follower
+    followTrace(traces, follow);
+  });
+
+  // on mouseover
+  heading.addEventListener("mouseover", function() {
+
+    // add class
+    canvas.classList.add("canvas--animated");
+
+  });
+
+  // on mouseout
+  heading.addEventListener("mouseout", function() {
+
+    // remove class
+    canvas.classList.remove("canvas--animated");
+
+  });
 });
