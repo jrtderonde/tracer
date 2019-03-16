@@ -173,7 +173,7 @@ html, body {
   position: absolute;
 
   // transition
-  transition: transform $timing * 5 ease, transform $timing * 5 ease;
+  transition: top $timing ease, left $timing ease, transform $timing * 5 ease;
   left: 0;
   top: 0;
   transform: scale(1);
