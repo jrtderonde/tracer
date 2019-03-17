@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // ===
 
   // declare follower
-  var follow = document.querySelector(".js-circle");
-  var canvas = document.querySelector(".js-canvas");
-  var heading = document.querySelector(".js-heading");
-  var buttons = document.querySelectorAll(".js-button");
+  let follow = document.querySelector(".js-circle");
+  let canvas = document.querySelector(".js-canvas");
+  let heading = document.querySelector(".js-heading");
+  let buttons = document.querySelectorAll(".js-button");
 
   // trace mouse
   function traceUser(event) {
     if (event !== null || traces !== underfined) {
       "use strict";
       // get mouse position
-      var p = {x: event.clientX, y: event.clientY}
+      let p = {x: event.clientX, y: event.clientY}
       // return values
       return p;
     }
@@ -28,36 +28,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function followTrace(traces, element) {
     if (traces !== undefined && element != undefined) {
 
+      // check if added
       if (element.style.opacity !== 1) {
         // set opacity to 1
         element.style.opacity = 1;
       }
 
       // set width and height
-      var w = element.offsetWidth;
-      var h = element.offsetHeight;
+      let w = element.offsetWidth;
+      let h = element.offsetHeight;
 
       // calculate position
-      var pos = {
+      let pos = {
         x: (traces.x - (w/2)) + "px",
         y: (traces.y - (h/2)) + "px"
       };
 
       // place
-      element.style.top = pos.y;
-      element.style.left = pos.x;
+      requestAnimationFrame(function(){
+        element.style.top = pos.y;
+        element.style.left = pos.x;
+      });
     }
   }
 
   function randomSpawn (element) {
-    var w;
-    var h;
-    var r;
+    let w;
+    let h;
+    let r;
 
     // check if given
     if (element !== undefined) {
       w = window.innerWidth;
       h = window.innerHeight;
+
+      console.log("----------");
+      console.log("Random spawn");
+      console.log("-----")
 
       // set left
       r = Math.floor(Math.random() * Math.floor(w));
@@ -68,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       r = Math.floor(Math.random() * Math.floor(h));
       element.style.top = r + "px";
       console.log("top: " + r);
+
+      console.log("----------");
     }
   }
 
@@ -75,44 +84,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // init
   // ===
 
+  // spawn follower on random point
   randomSpawn(follow);
 
   // on mouse move
   window.addEventListener("mousemove", function(event) {
-
     // set object
-    var traces = traceUser(event);
-
+    let traces = traceUser(event);
     // move the follower
     followTrace(traces, follow);
   });
 
   // on mouseover
   heading.addEventListener("mouseover", function() {
-
     // add class
     canvas.classList.add("canvas--animated");
-
     // check if available
     if (canvas.classList.contains("canvas--hidden-buttons")) {
       // remove to start animation
       canvas.classList.remove("canvas--hidden-buttons");
 
       // loop and show
-      for (var i = 0; buttons.length > i; i++) {
-        // show buttons
-        console.log(buttons[i].classList);
-        buttons[i].classList.remove("button--hidden");
+      for (let i = 0; buttons.length > i; i++) {
+        let button = buttons[i];
+
+        setTimeout(function () {
+            (function(button) {
+              // remove class
+              button.classList.remove("button--hidden");
+            })(button);
+        }, i * 250);
       }
     }
-
   });
 
   // on mouseout
   heading.addEventListener("mouseout", function() {
-
     // remove class
     canvas.classList.remove("canvas--animated");
-
   });
 });
