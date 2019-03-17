@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 
 $color: #fff;
+$secondary: #ee5a24;
 $timing: 100ms;
 $power: cubic-bezier(0.77, 0, 0.175, 1);
 $ease: ease;
@@ -48,6 +49,13 @@ html, body {
   // transition
   transition: color $timing * 5 $ease;
 
+  // span
+  span {
+    color: $secondary;
+    position: absolute;
+    transition: color $timing * 5 $ease;
+  }
+
   // hover
   &:hover {
     color: darken($color, 90%);
@@ -67,15 +75,17 @@ html, body {
   width: 100%;
   height: 100%;
   opacity: 1;
-  left: -100%;
+  // left: -100%;
+  top: 100%;
   background-color: darken($color, 85%);
 
   // transition
-  transition: opacity 500ms $ease, left 500ms $ease;
+  transition: opacity 500ms $ease, left 500ms $power, top 500ms $power;
 
   // on fire
   .canvas--animated & {
-    left: 0%;
+    // left: 0%;
+    top: 0%;
   }
 }
 
