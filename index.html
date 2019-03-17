@@ -14,13 +14,14 @@
     <div class="canvas js-canvas canvas--hidden-buttons">
 
       <!-- Gradient -->
-      <div class="canvas__gradient"></div>
+      <div class="canvas__gradient js-gradient"></div>
 
       <!-- Buttons -->
       <a
         href="https://github.com/jrtderonde/"
         target="_blank"
-        class="canvas__button button--top-left button--hidden js-button"
+        class="button button--top-left button--hidden js-button"
+        data-reset="left"
         title="GitHub">
         GitHub
       </a>
@@ -28,21 +29,24 @@
       <a
         href="https://www.linkedin.com/in/jimderonde/"
         target="_blank"
-        class="canvas__button button--bottom-left button--hidden js-button"
+        class="button button--bottom-left button--hidden js-button"
+        data-reset="left"
         title="LinkedIn">
         LinkedIn
       </a>
 
       <button
-        class="canvas__button button--top-right button--hidden js-button"
-        title="Projects">
-        Projects
+        class="button button--top-right button--hidden js-button js-toggle"
+        data-reset="right"
+        title="More">
+        More
       </button>
 
       <a
         href="mailto:jrtderonde@gmail.com"
         target="_blank"
-        class="canvas__button button--bottom-right button--hidden js-button"
+        class="button button--bottom-right button--hidden js-button"
+        data-reset="right"
         title="Contact">
         Contact
       </a>
@@ -53,9 +57,27 @@
       </h1>
 
       <!-- Follow -->
-      <div class="follow canvas__follow js-circle"></div>
+      <div class="follow canvas__follow js-circle">
+
+      </div>
+    </div>
+
+    <!-- Panel -->
+    <div class="panel js-panel">
+
+      <!-- Close -->
+      <button
+        class="button panel__button js-toggle"
+        data-reset="right"
+        title="Less">
+        Less
+      </button>
+
     </div>
 
   </body>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script type="text/javascript" src="src/js/app.min.js"></script>
 </html>
