@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700");
+html, body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden; }
+
+::selection {
+  background: transparent; }
+
+::-moz-selection {
+  background: transparent; }
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  display: table;
+  overflow: hidden;
+  position: relative; }
+
+.canvas__heading {
+  font-size: 8vw;
+  position: absolute;
+  z-index: 2;
+  font-weight: 100;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #1a1919;
+  text-align: center;
+  margin: 0;
+  padding: 5%;
+  mix-blend-mode: soft-light;
+  transition: color 500ms cubic-bezier(0.77, 0, 0.175, 1); }
+  .canvas__heading span {
+    color: #ee5a24;
+    position: absolute; }
+  .canvas__heading:hover {
+    cursor: none;
+    color: #f2f2f2; }
+
+.canvas__gradient {
+  position: absolute;
+  z-index: 0;
+  display: table;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  top: 100%;
+  background-color: #262626; }
+
+.button {
+  position: absolute;
+  z-index: 4;
+  font-weight: 400;
+  color: #e6e5e5;
+  text-decoration: none;
+  padding: 2vw;
+  font-size: 1.5vw;
+  letter-spacing: 1.5px;
+  display: block;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .button.button--top-left {
+    left: -15%;
+    top: 0; }
+  .button.button--bottom-left {
+    left: -15%;
+    bottom: 0; }
+  .button.button--top-right {
+    right: -15%;
+    top: 0; }
+  .button.button--bottom-right {
+    right: -15%;
+    bottom: 0; }
+  .button:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    transition: width 500ms cubic-bezier(0.77, 0, 0.175, 1); }
+  .button:hover:after {
+    width: 100%; }
+
+.follow {
+  width: 10vw;
+  padding-bottom: 10%;
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  transform: scale(1); }
+  .follow.canvas__follow {
+    z-index: 1; }
+
+.panel {
+  width: 100vw;
+  height: 100vw;
+  background-color: #262626;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 5; }
+  .panel .panel__button {
+    position: relative;
+    float: right; }
