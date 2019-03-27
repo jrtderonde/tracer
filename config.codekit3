@@ -49,7 +49,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/src/js/app.min.js",
-		"oF": 2,
+		"oF": 3,
 		"sC": 0,
 		"tS": 1
 		},
@@ -70,17 +70,227 @@
 		"oAP": "/src/js/app.min.js.map",
 		"oF": 0
 		},
+	"/src/js/gsap/easing/EasePack.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/easing/EasePack.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/jquery.gsap.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/jquery.gsap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/AttrPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/AttrPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/BezierPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/BezierPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/ColorPropsPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/ColorPropsPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/CSSPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/CSSPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/CSSRulePlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/CSSRulePlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/DirectionalRotationPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/DirectionalRotationPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/EaselPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/EaselPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/EndArrayPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/EndArrayPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/ModifiersPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/ModifiersPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/PixiPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/PixiPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/RaphaelPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/RaphaelPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/RoundPropsPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/RoundPropsPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/ScrollToPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/ScrollToPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/plugins/TextPlugin.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/plugins/TextPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/TimelineLite.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/TimelineLite.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/TimelineMax.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/TimelineMax.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/TweenLite.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/TweenLite.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/TweenMax.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/TweenMax.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/src/js/gsap/utils/Draggable.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/src/js/gsap/utils/Draggable.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/src/scss/app.scss": {
-		"aP": 1,
-		"bl": 1,
+		"aP": 0,
+		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "/src/css/app.css",
-		"oF": 2,
-		"oS": 3,
+		"oAP": "/src/scss/app.css",
+		"oF": 0,
+		"oS": 0,
 		"uL": 1
 		}
 	},

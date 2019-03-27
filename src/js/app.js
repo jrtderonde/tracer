@@ -107,8 +107,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // animate
     window.requestAnimationFrame(function() {
       TweenLite.to(gradient, 1, {top: 0, ease: Expo.easeInOut});
-      TweenLite.to(follow, .25, {scale: 2, ease: Power3.easeInOut});
       TweenLite.to(follow, .25, {backgroundColor: "#e6e5e5", ease: Power3.easeInOut});
+      TweenLite.to(heading, .1, {color: "#333333"});
+      TweenLite.to(follow, .25, {scale: 2, ease: Power3.easeInOut});
     });
 
     // check if available
@@ -135,11 +136,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // check and animate
             if (reset == "left") {
               window.requestAnimationFrame(function() {
-                TweenLite.to(button, .5, {left: 0, ease: Power3.easeInOut});
+                TweenLite.to(button, .5, {delay: (0.5 + (i / 4)), left: 0, ease: Power3.easeInOut});
               })
             } else if (reset == "right") {
               window.requestAnimationFrame(function() {
-                TweenLite.to(button, .5, {right: 0, ease: Power3.easeInOut});
+                TweenLite.to(button, .5, {delay: (0.5 + (i / 4)), right: 0, ease: Power3.easeInOut});
               });
             }
 
@@ -205,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // animate
     window.requestAnimationFrame(function() {
       TweenLite.to(gradient, 1, {top: '100%', ease: Expo.easeInOut});
+      TweenLite.to(heading, .1, {color: "#e6e5e5"});
       TweenLite.to(follow, .25, {scale: 1, ease: Power3.easeInOut});
       TweenLite.to(follow, .15, {backgroundColor: "#000000", ease: Power3.easeInOut}); // #000 - #e6e5e5
     });
