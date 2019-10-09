@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Meta -->
     <title>tracer.io</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/sanitize.css" />
-    <link rel="stylesheet" href="src/css/app.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" class="js-favicon" type="image/png" href="" />
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="build/css/index.css" />
+
   </head>
-  <body>
+  <body class="js-init" style="opacity: 0;">
+
+    <div class="circle"></div>
 
     <!-- Canvas -->
     <div class="canvas js-canvas canvas--hidden-buttons">
@@ -56,7 +66,10 @@
 
       <!-- Follow -->
       <div class="follow canvas__follow js-circle">
-
+        <svg viewbox="0 0 240 240">
+        	<circle class="js-circle-svg circle--static" cx="120" cy="120" r="100" />
+          <circle class="js-circle-svg circle--animate" cx="120" cy="120" r="100" />
+        </svg>
       </div>
     </div>
 
@@ -76,6 +89,5 @@
   </body>
 
   <!-- Scripts -->
-  <script type="text/javascript" src="src/js/gsap/TweenMax.min.js"></script>
-  <script type="text/javascript" src="src/js/app.min.js"></script>
+  <script type="text/javascript" src="build/js/bundle.js"></script>
 </html>
