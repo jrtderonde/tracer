@@ -58,12 +58,10 @@ class App {
       // set left
       r = Math.floor(Math.random() * Math.floor(w));
       element.style.left = r + "px";
-      console.log("-- left: " + r);
 
       // set top
       r = Math.floor(Math.random() * Math.floor(h));
       element.style.top = r + "px";
-      console.log("-- top: " + r);
     }
   }
 
@@ -100,11 +98,11 @@ class App {
           // check and animate
           if (button.dataset.reset == "left") {
             window.requestAnimationFrame(() => {
-              TweenLite.to(button, .5, {left: 0, ease: Power3.easeInOut});
+              TweenLite.to(button, .5, {delay: (waitTime), left: 0, ease: Power3.easeInOut});
             });
           } else if (button.dataset.reset == "right") {
             window.requestAnimationFrame(() => {
-              TweenLite.to(button, .5, {right: 0, ease: Power3.easeInOut});
+              TweenLite.to(button, .5, {delay: (waitTime), right: 0, ease: Power3.easeInOut});
             });
           }
 
@@ -246,7 +244,7 @@ class App {
         }
         // add trigger to canvas
         this.dom.init.classList.add("is--initialized");
-      }, (12 * this.static.timing)); // Wait for a second
+      }, (10 * this.static.timing)); // Wait for a second
 
       if (this.dom.init.classList.contains("is--initialized") === false) {
         // Add class to animate follow
@@ -299,6 +297,7 @@ class App {
 
           // remove js class
           this.dom.panel.classList.remove("panel--open");
+          this.dom.init.classList.remove("is--panel-active");
 
           // close
           window.requestAnimationFrame(() => {
@@ -309,6 +308,7 @@ class App {
 
           // set js class
           this.dom.panel.classList.add("panel--open");
+          this.dom.init.classList.add("is--panel-active");
 
           // close
           window.requestAnimationFrame(() => {

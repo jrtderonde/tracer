@@ -14,3 +14,8 @@ const app = new App();
 
 // initialize
 app.initialize();
+
+// in viewport
+import Viewport from './js/viewport';
+const viewport = new Viewport();
+viewport.initialize();
