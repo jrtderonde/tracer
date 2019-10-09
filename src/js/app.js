@@ -100,11 +100,11 @@ class App {
           // check and animate
           if (button.dataset.reset == "left") {
             window.requestAnimationFrame(() => {
-              TweenLite.to(button, .5, {delay: (waitTime), left: 0, ease: Power3.easeInOut});
+              TweenLite.to(button, .5, {left: 0, ease: Power3.easeInOut});
             });
           } else if (button.dataset.reset == "right") {
             window.requestAnimationFrame(() => {
-              TweenLite.to(button, .5, {delay: (waitTime), right: 0, ease: Power3.easeInOut});
+              TweenLite.to(button, .5, {right: 0, ease: Power3.easeInOut});
             });
           }
 
@@ -246,7 +246,7 @@ class App {
         }
         // add trigger to canvas
         this.dom.init.classList.add("is--initialized");
-      }, (8 * this.static.timing)); // Wait for a second
+      }, (12 * this.static.timing)); // Wait for a second
 
       if (this.dom.init.classList.contains("is--initialized") === false) {
         // Add class to animate follow
