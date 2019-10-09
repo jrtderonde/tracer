@@ -1,0 +1,19 @@
+# Dependency directory
+node_modules/
+vendor/
+
+# Caching
+.cache
+
+# Logs
+logs
+*.log
+
+# Debug log from npm
+npm-debug.log
+
+# OSX Files
+.DS_Store
+
+# Build files
+# build
