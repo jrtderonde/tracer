@@ -11,11 +11,9 @@ window.console.log(
 // import classes
 import App from './js/app';
 const app = new App();
+import Viewport from './js/viewport';
+const viewport = new Viewport();
 
 // initialize
 app.initialize();
-
-// in viewport
-import Viewport from './js/viewport';
-const viewport = new Viewport();
 viewport.initialize();

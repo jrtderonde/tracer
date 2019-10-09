@@ -1,0 +1,60 @@
+// buttons
+.button {
+  position: absolute;
+  z-index: 4;
+  font-weight: 400;
+  color: darken($color, 15%);
+  text-decoration: none;
+  padding: 2vw;
+  font-size: 1.5vw;
+  letter-spacing: 1.5px;
+  display: block;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color $timing * 5 $power;
+
+  // buttons
+  &.button--top-left {
+    left: -15%;
+    top: 0;
+  }
+
+  &.button--bottom-left {
+    left: -15%;
+    bottom: 0;
+  }
+
+  &.button--top-right {
+    right: -15%;
+    top: 0;
+  }
+
+  &.button--bottom-right {
+    right: -15%;
+    bottom: 0;
+  }
+
+  // after
+  &:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: darken($orange, 2.5%);
+    margin-top: 5px;
+    transition: width $timing * 5 $power;
+  }
+
+  // hover
+  &:hover {
+    color: $color;
+
+    // after
+    &:after {
+      width: 100%;
+    }
+  }
+}
