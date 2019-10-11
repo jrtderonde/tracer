@@ -145,7 +145,7 @@ class App {
 
       // vars
       top = "100%";
-      bg = "#000000";
+      bg = "rgb(51, 51, 51)";
       color = "#333";
       scale = 1;
     }
