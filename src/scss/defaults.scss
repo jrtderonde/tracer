@@ -17,20 +17,8 @@ html, body {
   &.is--panel-active {
     overflow-y: auto;
 
-    // Scrollbar styling
-    &::-webkit-scrollbar-track {
-    	-webkit-box-shadow: none;
-      background-color: darken($color, 85%);
-    }
-
     &::-webkit-scrollbar {
-    	width: .5vw;
-    	background-color: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-    	background-color: $color;
-    	border: none;
+      display: none;
     }
   }
 }

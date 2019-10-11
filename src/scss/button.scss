@@ -13,7 +13,7 @@
   appearance: none;
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  // cursor: pointer;
   transition: color $timing * 5 $power;
 
   // buttons
@@ -35,6 +35,10 @@
   &.button--bottom-right {
     right: -15%;
     bottom: 0;
+  }
+
+  &.button--static {
+    z-index: 999;
   }
 
   // after

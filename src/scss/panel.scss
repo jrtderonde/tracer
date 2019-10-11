@@ -6,8 +6,34 @@
   left: 100%;
   top: 0;
   z-index: 5;
-  backface-visibility: hidden;
-  will-change: transform;
+
+  // set after object with arrow
+  .panel__arrow {
+    content: "";
+    width: 2vw;
+    height: 2vw;
+    position: fixed;
+    opacity: 0;
+    right: 2vw;
+    bottom: 2vw;
+    transition: all ($timing * 10) ease;
+    outline: none;
+    border: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &.is--visible {
+      opacity: .8;
+    }
+
+    svg {
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+  }
 
   .panel__button {
     position: absolute;
@@ -31,9 +57,9 @@
     will-change: transform;
 
     // default
-    transform: translateY(20%);
+    transform: translateY(25%);
     opacity: 0;
-    transition: all ($timing * 5) ease;
+    transition: all ($timing * 8) cubic-bezier(0.25, 0.1, 0.25, 1);
 
     // when in viewport
     &.is--viewable {

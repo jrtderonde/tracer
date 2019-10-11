@@ -1,0 +1,10 @@
+// Toggletext
+[data-toggle-text] {
+  opacity: 1;
+  transition: opacity ($timing * 6) ease;
+
+
+  &.toggletext--faded {
+    opacity: 0;
+  }
+}

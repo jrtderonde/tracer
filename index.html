@@ -41,10 +41,14 @@
         LinkedIn
       </a>
 
+      <!-- Toggle -->
       <button
-        class="button button--top-right button--hidden js-button js-toggle"
+        class="button button--static button--top-right button--hidden js-button js-toggle"
         data-reset="right"
-        title="More">
+        title="More"
+        data-toggle-text
+        data-toggle-start="More"
+        data-toggle-end="Less">
         More
       </button>
 
@@ -74,12 +78,9 @@
     <!-- Panel -->
     <div class="panel js-panel">
 
-      <!-- Close -->
-      <button
-        class="button panel__button js-toggle"
-        data-reset="right"
-        title="Less">
-        Less
+      <!-- Arrow -->
+      <button class="panel__arrow js-arrow" data-parent=".js-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-213 296.1 59.8 87.9"><path d="M-210.8 349.7l-2.2 2 29.9 32.2 29.9-32.2-2.2-2-26.2 28.2v-96.2h-3v96.2l-26.2-28.2z" fill="#fff"/></svg>
       </button>
 
       <!-- Content -->

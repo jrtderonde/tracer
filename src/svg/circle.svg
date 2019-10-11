@@ -1,0 +1,5 @@
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792">
+		<circle class="js-circle-svg circle--static" cx="100" cy="100" r="97.5"/>
+		<circle class="js-circle-svg circle--animate" cx="100" cy="100" r="97.5"/>
+	</svg>
