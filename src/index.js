@@ -1,6 +1,7 @@
 // styles
 import './index.scss';
 import TweenMax from 'gsap';
+import TweenLite from 'gsap';
 
 // autograph
 window.console.log(
@@ -13,7 +14,10 @@ import App from './js/app';
 const app = new App();
 import Viewport from './js/viewport';
 const viewport = new Viewport();
+import ToggleText from './js/toggletext'
+const toggletext = new ToggleText();
 
 // initialize
 app.initialize();
 viewport.initialize();
+toggletext.initialize();

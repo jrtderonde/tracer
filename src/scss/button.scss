@@ -37,6 +37,10 @@
     bottom: 0;
   }
 
+  &.button--static {
+    z-index: 999;
+  }
+
   // after
   &:after {
     content: "";

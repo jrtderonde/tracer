@@ -27,8 +27,7 @@
         href="https://github.com/jrtderonde/"
         target="_blank"
         class="button button--top-left button--hidden js-button"
-        data-reset="left"
-        title="GitHub">
+        data-reset="left">
         GitHub
       </a>
 
@@ -36,15 +35,17 @@
         href="https://www.linkedin.com/in/jimderonde/"
         target="_blank"
         class="button button--bottom-left button--hidden js-button"
-        data-reset="left"
-        title="LinkedIn">
+        data-reset="left">
         LinkedIn
       </a>
 
+      <!-- Toggle -->
       <button
-        class="button button--top-right button--hidden js-button js-toggle"
+        class="button button--static button--top-right button--hidden js-button js-toggle"
         data-reset="right"
-        title="More">
+        data-toggle-text
+        data-toggle-start="More"
+        data-toggle-end="Less">
         More
       </button>
 
@@ -52,8 +53,7 @@
         href="mailto:jrtderonde@gmail.com"
         target="_blank"
         class="button button--bottom-right button--hidden js-button"
-        data-reset="right"
-        title="Contact">
+        data-reset="right">
         Contact
       </a>
 
@@ -65,8 +65,8 @@
       <!-- Follow -->
       <div class="follow canvas__follow js-circle">
         <svg viewbox="0 0 240 240">
-        	<circle class="js-circle-svg circle--static" cx="120" cy="120" r="100" />
-          <circle class="js-circle-svg circle--animate" cx="120" cy="120" r="100" />
+        	<circle fill="rgb(51, 51, 51)" class="js-circle-svg circle--static" cx="120" cy="120" r="100" />
+          <circle fill="rgb(51, 51, 51)" class="js-circle-svg circle--animate" cx="120" cy="120" r="100" />
         </svg>
       </div>
     </div>
@@ -74,12 +74,9 @@
     <!-- Panel -->
     <div class="panel js-panel">
 
-      <!-- Close -->
-      <button
-        class="button panel__button js-toggle"
-        data-reset="right"
-        title="Less">
-        Less
+      <!-- Arrow -->
+      <button class="panel__arrow js-arrow" data-parent=".js-panel">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-213 296.1 59.8 87.9"><path d="M-210.8 349.7l-2.2 2 29.9 32.2 29.9-32.2-2.2-2-26.2 28.2v-96.2h-3v96.2l-26.2-28.2z" fill="#fff"/></svg>
       </button>
 
       <!-- Content -->

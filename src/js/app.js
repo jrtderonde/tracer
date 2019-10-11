@@ -14,7 +14,8 @@ class App {
       toggle: document.querySelectorAll(".js-toggle"),
       panel: document.querySelector(".js-panel"),
       init: document.querySelector(".js-init"),
-      favicon: document.querySelector(".js-favicon")
+      favicon: document.querySelector(".js-favicon"),
+      arrow: document.querySelector(".js-arrow")
     }
 
     // favicons
@@ -144,7 +145,7 @@ class App {
 
       // vars
       top = "100%";
-      bg = "#000000";
+      bg = "rgb(51, 51, 51)";
       color = "#333";
       scale = 1;
     }
@@ -304,6 +305,9 @@ class App {
             TweenLite.to(this.dom.panel, 1.25, {left: "100%", ease: Expo.easeInOut});
           });
 
+          // remove arrow
+          this.dom.arrow.classList.remove("is--visible");
+
         } else {
 
           // set js class
@@ -314,6 +318,11 @@ class App {
           window.requestAnimationFrame(() => {
             TweenLite.to(this.dom.panel, 1.25, {left: "0%", ease: Expo.easeInOut});
           });
+
+          // Wait untill animated
+          setTimeout(() => {
+            this.dom.arrow.classList.add("is--visible");
+          }, 500);
 
         }
 
