@@ -4,26 +4,98 @@
   flex-wrap: wrap;
   width: 85vw;
   margin: 5vw 2.5vw;
+
+  h2 {
+    font-weight: 700;
+    color: $color;
+    margin: 0;
+    line-height: 125%;
+    word-break: normal;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 125%;
+  }
+
+  p {
+    margin-bottom: 1.25vw;
+  }
 }
 
+// push component
+.text--large-offset {
+  margin: 7.5vw 2.5vw;
+}
+
+// heading comp.
 .text__heading {
+
+  &.text__heading--left {
+
+    article {
+      margin-left: 0;
+
+      h2 {
+        text-align: left;
+      }
+    }
+
+  }
 
   article {
     width: 60%;
     margin-left: 40%;
 
-    h1 {
+    h2 {
       font-size: 7.5vw;
-      font-weight: 700;
-      color: $color;
-      margin: 0;
-      line-height: 125%;
-      word-break: normal;
       text-align: right;
+    }
+  }
+}
 
-      span {
-        color: $orange;
+.text__content {
+  margin-left: calc(2.5vw + 5%);
+
+  article {
+    width: 60%;
+
+    h2 {
+      font-size: 3vw;
+      margin-bottom: 5vw;
+    }
+
+    h3 {
+      color: $orange;
+      margin-bottom: .5vw;
+    }
+
+    p {
+      margin-bottom: 1.25vw;
+      font-size: 1vw;
+      padding-right: 25%;
+      color: $color;
+
+      a {
+        color: darken($color, 40%);
+        text-decoration: none;
       }
+    }
+  }
+
+  &.text__content--right {
+    margin-left: 35%;
+    text-align: right;
+
+    p {
+      padding-right: 0;
+      padding-left: 25%;
     }
   }
 }
