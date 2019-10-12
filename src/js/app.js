@@ -245,7 +245,7 @@ class App {
         }
         // add trigger to canvas
         this.dom.init.classList.add("is--initialized");
-      }, (10 * this.static.timing)); // Wait for a second
+      }, (11 * this.static.timing)); // Wait for a second
 
       if (this.dom.init.classList.contains("is--initialized") === false) {
         // Add class to animate follow
