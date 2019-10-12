@@ -22,6 +22,7 @@
     background: transparent;
     border: 0;
     // cursor: pointer;
+    z-index: 1;
 
     &.is--visible {
       opacity: .8;
