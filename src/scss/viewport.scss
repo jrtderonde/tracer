@@ -1,0 +1,28 @@
+[data-observe] {
+
+  // Custom animations
+  &.panel__intro {
+    opacity: 0;
+    transform: translateX(15%);
+    transition: all ($timing * 10) $ease;
+
+    // when animated,
+    &.is--viewable {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  &.panel__text {
+    // default
+    transform: translateY(25%);
+    transition: all ($timing * 10) $ease;
+    opacity: 0;
+
+    // when in viewport
+    &.is--viewable {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

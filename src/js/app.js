@@ -5,17 +5,17 @@ class App {
 
     // DOM
     this.dom = {
-      follow: document.querySelector(".js-circle"),
-      circles: document.querySelectorAll(".js-circle circle"),
-      canvas: document.querySelector(".js-canvas"),
+      follow:   document.querySelector(".js-circle"),
+      circles:  document.querySelectorAll(".js-circle circle"),
+      canvas:   document.querySelector(".js-canvas"),
       gradient: document.querySelector(".js-gradient"),
-      heading: document.querySelector(".js-heading"),
-      buttons: document.querySelectorAll(".js-button"),
-      toggle: document.querySelectorAll(".js-toggle"),
-      panel: document.querySelector(".js-panel"),
-      init: document.querySelector(".js-init"),
-      favicon: document.querySelector(".js-favicon"),
-      arrow: document.querySelector(".js-arrow")
+      heading:  document.querySelector(".js-heading"),
+      buttons:  document.querySelectorAll(".js-button"),
+      toggle:   document.querySelectorAll(".js-toggle"),
+      panel:    document.querySelector(".js-panel"),
+      init:     document.querySelector(".js-init"),
+      favicon:  document.querySelector(".js-favicon"),
+      arrow:    document.querySelector(".js-arrow")
     }
 
     // favicons
@@ -307,6 +307,7 @@ class App {
 
           // remove arrow
           this.dom.arrow.classList.remove("is--visible");
+          this.dom.panel.classList.remove("has--animated");
 
         } else {
 
