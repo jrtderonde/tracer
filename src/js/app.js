@@ -307,6 +307,7 @@ class App {
 
           // remove arrow
           this.dom.arrow.classList.remove("is--visible");
+          this.dom.panel.classList.remove("has--animated");
 
         } else {
 
@@ -323,6 +324,11 @@ class App {
           setTimeout(() => {
             this.dom.arrow.classList.add("is--visible");
           }, 500);
+
+          // Wait untill animated
+          setTimeout(() => {
+            this.dom.panel.classList.add("has--animated");
+          }, 750);
 
         }
 

@@ -1,0 +1,21 @@
+.text__heading {
+
+  article {
+    width: 60%;
+    margin-left: 40%;
+
+    h1 {
+      font-size: 7.5vw;
+      font-weight: 700;
+      color: $color;
+      margin: 0;
+      line-height: 125%;
+      word-break: normal;
+      text-align: right;
+
+      span {
+        color: $orange;
+      }
+    }
+  }
+}

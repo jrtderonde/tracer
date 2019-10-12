@@ -11,11 +11,11 @@ window.console.log(
 
 // import classes
 import App from './js/app';
-const app = new App();
 import Viewport from './js/viewport';
-const viewport = new Viewport();
-import ToggleText from './js/toggletext'
+import ToggleText from './js/toggletext';
 const toggletext = new ToggleText();
+const viewport = new Viewport();
+const app = new App();
 
 // initialize
 app.initialize();
