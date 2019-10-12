@@ -3,10 +3,12 @@ class Viewport {
   // Constructor of class
   constructor () {
     this.dom = {
-      observed: document.querySelectorAll("[data-observe]"),
+      observed:  document.querySelectorAll("[data-observe]"),
       container: document.querySelector(".js-panel"),
-      body: document.querySelector("body"),
-      arrow: document.querySelector(".js-arrow")
+      body:      document.querySelector("body"),
+      arrow:     document.querySelector(".js-arrow"),
+      panel:     document.querySelector(".js-panel"),
+      toggle:    document.querySelector(".js-toggle")
     }
   }
 
@@ -72,9 +74,16 @@ class Viewport {
   // initialize
   initialize = () => {
 
-    // Check once
-    const elements = document.querySelectorAll("[data-observe]");
-    this.ifVisible(elements);
+    // Wait untill animated
+    this.dom.toggle.addEventListener("click", () => {
+
+      // Check once after 750ms
+      setTimeout(() => {
+        const elements = document.querySelectorAll("[data-observe]");
+        this.ifVisible(elements);
+      }, 750);
+
+    });
 
     // On scroll
     this.dom.body.addEventListener("scroll", () => {

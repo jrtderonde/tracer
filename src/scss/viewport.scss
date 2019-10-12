@@ -6,9 +6,8 @@
     transform: translateX(15%);
     transition: all ($timing * 10) $ease;
 
-    // when animated
-    .has--animated &,
-    &.is--visible {
+    // when animated,
+    &.is--viewable {
       opacity: 1;
       transform: translateX(0%);
     }
