@@ -3,8 +3,15 @@
   // Custom animations
   &.text {
     opacity: 0;
-    transform: translateX(15%);
     transition: all ($timing * 10) $ease;
+
+    &.fade--right {
+      transform: translateX(15%);
+    }
+
+    &.fade--left {
+      transform: translateX(-15%);
+    }
 
     // when animated,
     &.is--viewable {

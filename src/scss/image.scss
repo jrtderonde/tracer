@@ -1,11 +1,17 @@
 .image {
     width: 100vw;
-    margin: 7.5vw 0;
+    margin: 10vw 0;
     display: block;
 
     .image__img {
-      width: 75%;
+      width: 80%;
       height: auto;
       display: block;
+    }
+
+    &.image--right {
+      .image__img {
+        margin-left: 20%;
+      }
     }
 }
