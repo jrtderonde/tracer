@@ -16,7 +16,7 @@ class Viewport {
   ifVisible = (elements) => {
     // Loop
     elements.forEach((element) => {
-      this.triggerElement(element, this.inView(element, 150))
+      this.triggerElement(element, this.inView(element, .25))
     });
   }
 
@@ -27,10 +27,12 @@ class Viewport {
     let windowHeight    = window.innerHeight;
     let scrollY         = window.scrollY || window.pageYOffset;
     let scrollPosition  = scrollY + windowHeight;
-    let elementPosition = element.getBoundingClientRect().top + scrollY + element.clientHeight;
+    let elementPosition = element.getBoundingClientRect().top + scrollY;
+    let calcOffset      = (offset * element.clientHeight);
+    let newScroll       = scrollPosition + calcOffset;
 
     // In view
-    if (scrollPosition > (elementPosition - offset)) {
+    if ((scrollPosition - calcOffset) > (elementPosition)) {
       return true;
     } else {
       return false;
