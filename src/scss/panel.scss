@@ -47,15 +47,6 @@
     height: 100%;
   }
 
-  .panel__intro {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 85vw;
-    margin: 2.5vw;
-    margin-bottom: 10vw;
-  }
-
   .panel__text {
     color: $color;
     display: flex;

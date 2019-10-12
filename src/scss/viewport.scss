@@ -1,7 +1,7 @@
 [data-observe] {
 
   // Custom animations
-  &.panel__intro {
+  &.text {
     opacity: 0;
     transform: translateX(15%);
     transition: all ($timing * 10) $ease;
@@ -10,6 +10,18 @@
     &.is--viewable {
       opacity: 1;
       transform: translateX(0%);
+    }
+  }
+
+  // image component
+  &.image {
+    transform: translateX(-5vw) translateY(15%);
+    opacity: 0;
+    transition: all ($timing * 8) $ease;
+
+    &.is--viewable {
+      transform: translateX(-5vw) translateY(0%);
+      opacity: 1;
     }
   }
 
