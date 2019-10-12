@@ -1,3 +1,12 @@
+.text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85vw;
+  margin: 2.5vw;
+  margin-bottom: 10vw;
+}
+
 .text__heading {
 
   article {
