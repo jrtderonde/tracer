@@ -34,9 +34,9 @@
 
   &.footer {
     // default
-    transform: translateY(10%);
+    // transform: translateY(10%);
     transition: all ($timing * 10) $ease;
-    opacity: 0;
+    // opacity: 0;
 
     .push {
       transition: margin ($timing * 8) $power;
@@ -45,8 +45,8 @@
 
     // when in viewport
     &.is--viewable {
-      transform: translateY(0%);
-      opacity: 1;
+      // transform: translateY(0%);
+      // opacity: 1;
 
       .push {
         margin: 0 .5vw;

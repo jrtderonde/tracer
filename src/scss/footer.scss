@@ -6,6 +6,8 @@
     flex-wrap: wrap;
     background-color: darken($color, 90%);
     // border-bottom: 1vw $color solid;
+    position: relative;
+    z-index: 2;
 
     h2, h3 {
         margin: 0;
