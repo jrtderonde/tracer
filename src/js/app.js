@@ -294,6 +294,9 @@ class App {
       // click event
       btn.addEventListener("click", () => {
 
+        // Body scroll top
+        this.dom.init.scrollTop = 0;
+
         if (this.dom.panel.classList.contains("panel--open") === true) {
 
           // remove js class

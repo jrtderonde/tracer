@@ -16,7 +16,7 @@
     opacity: 0;
     right: 2vw;
     bottom: 2vw;
-    transition: all ($timing * 10) $power;
+    transition: all ($timing * 12) $ease;
     outline: none;
     border: none;
     background: transparent;
@@ -25,7 +25,7 @@
     z-index: 1;
 
     &.is--visible {
-      opacity: .8;
+      opacity: .9;
     }
 
     svg {
@@ -34,6 +34,8 @@
       width: auto;
       display: block;
       fill: $color;
+      stroke: $color;
+      stroke-width: .2vw;
     }
   }
 

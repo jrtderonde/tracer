@@ -32,6 +32,28 @@
     }
   }
 
+  &.footer {
+    // default
+    // transform: translateY(10%);
+    transition: all ($timing * 10) $ease;
+    // opacity: 0;
+
+    .push {
+      transition: margin ($timing * 8) $power;
+      margin: 0;
+    }
+
+    // when in viewport
+    &.is--viewable {
+      // transform: translateY(0%);
+      // opacity: 1;
+
+      .push {
+        margin: 0 .5vw;
+      }
+    }
+  }
+
   &.panel__text {
     // default
     transform: translateY(25%);
