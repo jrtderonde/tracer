@@ -1,23 +1,25 @@
 .canvas {
   width: 100vw;
   height: 100vh;
-  display: table;
+  display: flex;
   overflow: hidden;
   position: relative;
+  justify-content: center;
+  align-items: center;;
 }
 
 .canvas__heading {
   font-size: 8vw;
-  position: absolute;
+  // position: absolute;
   z-index: 2;
   font-weight: 100;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  // top: 50%;
+  // left: 50%;
+  // transform: translateY(-50%) translateX(-50%);
   color: darken($color, 80%);
   text-align: center;
-  margin: 0;
-  padding: 5%;
+  margin: 0 auto;
+  padding: 2.5vw;
 
   // blend modes
   // mix-blend-mode: soft-light;
