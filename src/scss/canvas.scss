@@ -31,15 +31,28 @@
   transition: all $timing * 5 $power;
 
   // span
+  .push {
+    transition: margin $timing * 8 $power;
+    margin: 0;
+    color: inherit;
+  }
+
   span {
-    color: $orange;
-    position: absolute;
+
+    &:not(.push) {
+      color: $orange;
+    }
+    // position: absolute;
   }
 
   // hover
   &:hover {
     cursor: none;
     color: darken($color, 5%);
+
+    .push {
+      margin: 0 1.5vw;
+    }
   }
 }
 
